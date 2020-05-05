@@ -1,6 +1,5 @@
 package com.example.demo.controller.export;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -28,9 +27,6 @@ public class ExportClientController {
 	
 	@Autowired
     private ExportClientExcelService exportClientExcelService;
-
-    //@Autowired
-    //private ExportClientExcelService exportClientExcelService;
 
     /**
      * Export des clients au format CSV, déclenché sur l'url http://.../export/clients/csv

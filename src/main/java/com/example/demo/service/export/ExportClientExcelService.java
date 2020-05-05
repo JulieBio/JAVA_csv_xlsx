@@ -1,18 +1,14 @@
 package com.example.demo.service.export;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
@@ -44,9 +40,8 @@ public class ExportClientExcelService {
     	
     	List<Client> allClients = clientRepository.findAll();
     	
-    	// Création des sheets = onglets / feuilles
+    	// Création de sheet
     	Sheet sheet = workbook.createSheet("Clients");
-        Sheet sheet2 = workbook.createSheet("Factures");
         
         
         // Création d'une Row
